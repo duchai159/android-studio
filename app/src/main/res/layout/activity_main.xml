@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextX1"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:hint="Enter x1"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextX2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter x2"
+        android:layout_marginRight="16dp"
+        android:layout_toEndOf="@id/editTextX1"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextA"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter a"
+        android:layout_toEndOf="@id/editTextX2"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/editTextA"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnZoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/editTextA"
+        android:layout_toEndOf="@id/btnSubmit"
+        android:layout_marginTop="16dp"
+        android:onClick="onZoomInClick"/>
+
+    <Button
+        android:id="@+id/btnZoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_toEndOf="@id/btnZoomIn"
+        android:layout_below="@id/editTextA"
+        android:layout_marginTop="16dp"
+        android:onClick="onZoomOutClick"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnSubmit"
+        android:layout_marginTop="16dp"/>
+
+
+</RelativeLayout>
